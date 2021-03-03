@@ -1,7 +1,7 @@
-const ButtonMore = () => {
+const ButtonMore = (props) => {
     return(
         <div>
-            <button id="loadMore" className="btn btn--secondary">Ver más cotizaciones</button>
+            <button id="loadMore" className="btn btn--secondary" onClick={props.loadMore}>Ver más cotizaciones</button>
         </div>
     )
 };

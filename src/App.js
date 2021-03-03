@@ -62,6 +62,39 @@ function App() {
     setRates(cotizacionesInfo(result.rates));
   }
 
+  const loadMoreValues = (rates) => {
+  return [
+    {
+        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/300px-Flag_of_Brazil.svg.png',
+        moneda: 'BRL',
+        valor: rates['BRL'],
+    },
+    {
+        imagen: 'https://www.banderas-mundo.es/data/flags/w580/au.png',
+        moneda: 'AUD',
+        valor: rates['AUD'],
+    },
+    {
+        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png',
+        moneda: 'NZD',
+        valor: rates['NZD'],
+    },
+    {
+        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfhDt5Qq_paIIwcOFE2kX_FlNMlcEow-9KQ&usqp=CAU',
+        moneda: 'MXN',
+        valor: rates['MXN'],
+    }
+  ]
+}
+
+const loadMore = async() => {
+  const valueCurrency = currency;
+  const valueDate = date;
+
+  const result = await fetch('https://api.exchangeratesapi.io/' + valueDate + '?base=' + valueCurrency).then(response => response.json());
+  setRates([...cotizacionesInfo(result.rates), ...loadMoreValues(result.rates)]);
+}
+
   return (
     <div className="App">
       <body onload="cargaInicial()">
@@ -77,7 +110,7 @@ function App() {
               <ButtonSearch search={buscarCotizacion} />
 
               <TableResult info={rates} />
-              <ButtonMore />
+              <ButtonMore loadMore={loadMore}/>
             </div>
           </div>
 
