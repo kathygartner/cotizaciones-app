@@ -1,0 +1,11 @@
+@mixin btn {
+    font: $fontRegular 14px $fontBase;
+    width: 100%;
+    border-radius: 30px;
+    padding: 0.75rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid $orange;
+    box-shadow: 2px 3px 7pt 1pt #ffdad3;
+    :focus {outline: none;}
+} 

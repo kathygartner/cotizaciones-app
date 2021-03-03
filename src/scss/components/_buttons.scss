@@ -1,0 +1,13 @@
+.btn {
+    @include btn;
+
+    &--primary {
+        background-color: $orange;
+        color: $white;
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $orange;
+    }
+}
