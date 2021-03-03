@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from './components/Form';
 import TableResult from './components/TableResult';
 import ButtonSearch from './components/ButtonSearch';
@@ -27,6 +27,13 @@ function App() {
 
   const [rates, setRates] = useState([]);
 
+  const getResult = async () => {
+    const valueCurrency = currency;
+    const valueDate = date;
+    const result = await fetch('https://api.exchangeratesapi.io/' + valueDate + '?base=' + valueCurrency).then(response => response.json());
+    return result;
+  }
+
   const cotizacionesInfo = (rates) => {
     return [
         {
@@ -53,12 +60,7 @@ function App() {
 }
 
   const buscarCotizacion = async () => {
-    const valueCurrency = currency;
-    const valueDate = date;
-
-    const result = await fetch('https://api.exchangeratesapi.io/' + valueDate + '?base=' + valueCurrency).then(response => response.json());
-
-    console.log(result);
+    const result = await getResult();
     setRates(cotizacionesInfo(result.rates));
   }
 
@@ -88,12 +90,13 @@ function App() {
 }
 
 const loadMore = async() => {
-  const valueCurrency = currency;
-  const valueDate = date;
-
-  const result = await fetch('https://api.exchangeratesapi.io/' + valueDate + '?base=' + valueCurrency).then(response => response.json());
+  const result = await getResult();
   setRates([...cotizacionesInfo(result.rates), ...loadMoreValues(result.rates)]);
 }
+
+useEffect( async() => {
+    await buscarCotizacion();
+  }, []);
 
   return (
     <div className="App">
