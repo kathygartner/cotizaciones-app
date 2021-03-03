@@ -100,8 +100,6 @@ useEffect( async() => {
 
   return (
     <div className="App">
-      <body onload="cargaInicial()">
-
         <div className="conversion">
 
           <div className="conversion-wrap">
@@ -120,8 +118,6 @@ useEffect( async() => {
           <div className="footer">
           </div>
         </div>
-
-      </body>
     </div>
   );
 }
