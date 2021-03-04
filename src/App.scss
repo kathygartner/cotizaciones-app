@@ -1,11 +1,7 @@
 @import 'scss/utilities/variables',
-        'scss/utilities/mixins',
-        'scss/utilities/functions';
+        'scss/utilities/mixins';
 
 @import 'scss/pages/conversionPage';
-
-@import 'scss/layouts/form',
-        'scss/layouts/header';
 
 @import 'scss/components/buttons',
         'scss/components/input';

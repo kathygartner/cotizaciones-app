@@ -1,0 +1,51 @@
+.selector {
+    &__select {
+        @include input;
+        padding: 0.6rem 0.5rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: none;
+        box-sizing: border-box;
+        @include greyShadow;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        background-image: url("../../assets/icons/arrow_down.svg");
+        background-repeat: no-repeat;
+        background-position-x: 98%;
+        background-position-y: 50%;
+        
+    }
+
+    &__label {
+        font-size: $small;
+    }
+}
+
+.calendar {
+    margin-bottom: 1.5rem;
+    &__input {
+        @include input;
+        padding: 0.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        word-spacing: 10px;
+    }
+
+    &__input[type="date" i] {
+        align-items: center;
+        display: -webkit-inline-flex;
+        font-family: $fontBase;
+        text-transform: uppercase;
+        cursor: default;
+        border: none;
+        box-sizing: border-box;
+        @include greyShadow;
+    }
+
+    &__label {
+        font-size: $small;
+        margin-bottom: 8px;
+    }
+}

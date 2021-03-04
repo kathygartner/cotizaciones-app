@@ -8,4 +8,17 @@
     border: 1px solid $orange;
     box-shadow: 2px 3px 7pt 1pt #ffdad3;
     :focus {outline: none;}
-} 
+}
+
+@mixin input {
+    width: 100%;
+    color: $grey;
+    font-size: $small;
+    border-radius: 10px;
+}
+
+@mixin greyShadow {
+    -webkit-box-shadow: 2px 2px 7pt 0pt $grey-light;
+    -moz-box-shadow: 2px 2px 7pt 0pt $grey-light;
+    box-shadow: 2px 2px 7pt 0pt $grey-light;
+}

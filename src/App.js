@@ -37,24 +37,24 @@ function App() {
   const cotizacionesInfo = (rates) => {
     return [
         {
-            imagen: 'https://img.flaticon.com/icons/png/512/197/197430.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF',
-            moneda: 'CAD',
-            valor: rates['CAD'],
+            image: 'https://img.flaticon.com/icons/png/512/197/197430.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF',
+            currency: 'CAD',
+            value: rates['CAD'],
         },
         {
-            imagen: 'https://i.pinimg.com/originals/6e/d6/d5/6ed6d5f4ad65d31dd9a8547e09d9c0e3.jpg',
-            moneda: 'GBP',
-            valor: rates['GBP'],
+            image: 'https://i.pinimg.com/originals/6e/d6/d5/6ed6d5f4ad65d31dd9a8547e09d9c0e3.jpg',
+            currency: 'GBP',
+            value: rates['GBP'],
         },
         {
-            imagen: 'https://image.freepik.com/vector-gratis/original-simple-bandera-estados-unidos-america_100456-79.jpg',
-            moneda: 'USD',
-            valor: rates['USD'],
+            image: 'https://image.freepik.com/vector-gratis/original-simple-bandera-estados-unidos-america_100456-79.jpg',
+            currency: 'USD',
+            value: rates['USD'],
         },
         {
-            imagen: 'https://farm2.static.flickr.com/1002/4729644300_fdd184e0a3.jpg',
-            moneda: 'EUR',
-            valor: rates['EUR'],
+            image: 'https://farm2.static.flickr.com/1002/4729644300_fdd184e0a3.jpg',
+            currency: 'EUR',
+            value: rates['EUR'],
         }
     ]
 }
@@ -67,24 +67,24 @@ function App() {
   const loadMoreValues = (rates) => {
   return [
     {
-        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/300px-Flag_of_Brazil.svg.png',
-        moneda: 'BRL',
-        valor: rates['BRL'],
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/300px-Flag_of_Brazil.svg.png',
+        currency: 'BRL',
+        value: rates['BRL'],
     },
     {
-        imagen: 'https://www.banderas-mundo.es/data/flags/w580/au.png',
-        moneda: 'AUD',
-        valor: rates['AUD'],
+        image: 'https://www.banderas-mundo.es/data/flags/w580/au.png',
+        currency: 'AUD',
+        value: rates['AUD'],
     },
     {
-        imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png',
-        moneda: 'NZD',
-        valor: rates['NZD'],
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png',
+        currency: 'NZD',
+        value: rates['NZD'],
     },
     {
-        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfhDt5Qq_paIIwcOFE2kX_FlNMlcEow-9KQ&usqp=CAU',
-        moneda: 'MXN',
-        valor: rates['MXN'],
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfhDt5Qq_paIIwcOFE2kX_FlNMlcEow-9KQ&usqp=CAU',
+        currency: 'MXN',
+        value: rates['MXN'],
     }
   ]
 }
